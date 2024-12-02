@@ -120,9 +120,19 @@ body{
 }
 .photo-gallery .photo img{
     max-width: 100%;
-    border-radius: 5px;
     object-fit: cover;
     transition:transform .3s ease;
+}
+.photo::after {
+    content: url('./logos/downloadlogo.png');
+    scale: .1; /* Path to your logo */
+    top: 10px; /* Adjust vertical position */
+    left: 10px; /* Adjust horizontal position */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better visibility */
+    padding: 5px;
+    border-radius: 50%; /* Optional: Make the logo circular */
+    pointer-events: none; /* Ensures the logo doesn't interfere with clicks */
+    z-index: 2; /* Make sure the logo appears above the image */
 }
 .photo img:hover{
     content: '';
