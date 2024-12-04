@@ -28,12 +28,23 @@
         </nav>
         
     </header>
+    <div class="container">
+        <form>
+            <input type="text" placeholder="Search Anything" name="q" class="search-bar">
+            <button type="submit" class="search"><img src="./logos/search.png" alt=""></button>
+        </form>
+    </div>
     <div class="second-container">
         <p>Royalty-free images & Royalty-free stock</p>
     </div>
     <div class="grid-container">
+        <form id="photorequest-form" action="/request-photo" method="POST" class="request">
+            <label for="photo-request" class="label-font">Didn't find what you're looking for? Request it here:</label>
+            <input type="text" name="photo-request" placeholder="Describe the photo" class="search-bar">
+            <button type="submit" class="submit">Request Photo</button>
+        </form>
         <div class="photo-gallery">
-            <a href="./images/pic1.webp" download="pic1.webp">
+            <a href="./images/pic1.webp" download="pic1.webp" data-tags="evening flower goldenhour">
                 <div class="photo">
                     <img src="./images/pic1.webp" loading="lazy" alt="">
                     <div class="downloadlogo">
@@ -41,89 +52,89 @@
                     </div>
                 </div>
             </a>
-            <a href="./images/pic2.webp" download="pic2.webp">
+            <a href="./images/pic2.webp" download="pic2.webp" data-tags="vehicle">
                 <div class="photo">
-                    <img src="./images/pic2.webp" loading="lazy" alt="">
+                    <img src="./images/pic2.webp" loading="lazy" alt="riding-scooty">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic3.webp">
+            <a href="./images/pic3.webp"  download="pic2.webp" data-tags="evening">
                 <div class="photo">
-                <img src="./images/pic3.webp" loading="lazy" alt="">
+                <img src="./images/pic3.webp" loading="lazy" alt="evening">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic4.webp">
+            <a href="./images/pic4.webp"  download="pic2.webp" data-tags="dragon-fly">
                 <div class="photo">
-                <img src="./images/pic4.webp" loading="lazy" alt="">
+                <img src="./images/pic4.webp" loading="lazy" alt="dragonfly">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic5.webp">
+            <a href="./images/pic5.webp"  download="pic2.webp" data-tags="street">
                 <div class="photo">
-                <img src="./images/pic5.webp" loading="lazy" alt="">
+                <img src="./images/pic5.webp" loading="lazy" alt="street">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic6.webp">
+            <a href="./images/pic6.webp" download="pic2.webp" data-tags="temple">
                 <div class="photo">
-                <img src="./images/pic6.webp" loading="lazy" alt="">
+                <img src="./images/pic6.webp" loading="lazy" alt="temple">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic7.webp">
+            <a href="./images/pic7.webp" download="pic2.webp" data-tags="moon chaand nasa eid ">
                 <div class="photo">
-                <img src="./images/pic7.webp" loading="lazy" alt="">
+                <img src="./images/pic7.webp" loading="lazy" alt="moon">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic8.webp">
+            <a href="./images/pic8.webp" download="pic2.webp" data-tags="flower" >
                 <div class="photo">
-                <img src="./images/pic8.webp" loading="lazy" alt="">
+                <img src="./images/pic8.webp" loading="lazy" alt="flower">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic9.webp">
+            <a href="./images/pic9.webp" download="pic2.webp" data-tags="lizard">
                 <div class="photo">
-                <img src="./images/pic9.webp" loading="lazy" alt="">
+                <img src="./images/pic9.webp" loading="lazy" alt="Lizard">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic10.webp">
+            <a href="./images/pic10.webp" download="pic2.webp" data-tags="village">
                 <div class="photo">
-                <img src="./images/pic10.webp" loading="lazy" alt="">
+                <img src="./images/pic10.webp" loading="lazy" alt="village">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic11.webp">
+            <a href="./images/pic11.webp" download="pic2.webp" data-tags="nature">
                 <div class="photo">
-                <img src="./images/pic11.webp" loading="lazy" alt="">
+                <img src="./images/pic11.webp" loading="lazy" alt="nature">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic12.webp">
+            <a href="./images/pic12.webp" download="pic2.webp" data-tags="stars">
                 <div class="photo">
-                <img src="./images/pic12.webp" loading="lazy" alt="">
+                <img src="./images/pic12.webp" loading="lazy" alt="stars">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
@@ -143,6 +154,60 @@
      </footer>
     </section>
 
-      
+    <script>
+        const searchBar = document.querySelector('.search-bar');
+const photos = document.querySelectorAll('.photo-gallery a');
+const form = document.querySelector('form');
+const searchButton = document.querySelector('.search');
+const photoRequestForm = document.querySelector('#photorequest-form');
+
+// Prevent form submission and trigger search
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    performSearch();
+});
+
+searchButton.addEventListener('click', () => {
+    performSearch();
+});
+
+function performSearch() {
+    const query = searchBar.value.trim().toLowerCase();
+    let matchFound = false;
+
+    photos.forEach((photo) => {
+        const tags = photo.getAttribute('data-tags').toLowerCase();
+        if (tags.includes(query)) {
+            photo.classList.remove('hidden');
+            matchFound = true;
+        } else {
+            photo.classList.add('hidden');
+        }
+    });
+
+    // Show or hide the photo request form
+    if (!matchFound && query !== "") {
+        photoRequestForm.style.display = 'flex';
+    } else {
+        photoRequestForm.style.display = 'none';
+    }
+}
+
+// Prevent default navigation and open images in a new tab
+photos.forEach((photo) => {
+    photo.addEventListener('click', (event) => {
+        const clickedElement = event.target;
+
+        // Check if click is on download logo
+        if (clickedElement.closest('.downloadlogo')) {
+            return; // Allow default download
+        }
+
+        event.preventDefault();
+        const imageURL = photo.getAttribute('href');
+        window.open(imageURL, '_blank');
+    });
+});
+    </script>      
 </body>
 </html>

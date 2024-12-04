@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.hidden {
+    display: none !important; 
+}
 .html{
     scroll-behavior: smooth;
 }
@@ -78,6 +81,47 @@ body{
     background: #fff;
     transition: .3s;
 }
+.request{
+    z-index: 2;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    left: 25%;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px;
+    margin: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Ensure it doesn't exceed parent container */
+    width: 100%; /* Adjust to parent's width */
+    box-sizing: border-box; /* Include padding in width */
+}
+.label-font{
+    font-size: 1.5rem;
+}
+.request .search-bar{
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px 30px 30px 30px;
+    font-size: 16px;
+    outline: none;
+}
+.submit{
+    position:relative;
+    right: 0;
+    background-color: #dac9c9;
+    border: none;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 30px 30px 30px 30px;
+    cursor: pointer;
+    display: flex;
+}
 .second-container{
     display: flex;
     position:relative;
@@ -88,6 +132,56 @@ body{
     align-items: center;
     font-size: 32px;
 }
+.container {
+    position: relative;
+    top: 10rem;
+    width: 100vw;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: 500px;
+}
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px 30px 30px 30px;
+    font-size: 16px;
+    outline: none;
+    transition: transform opacity(1s);
+}
+button {
+    position: absolute;
+    right: 0;
+    background-color: #dac9c9;
+    border: none;
+    padding: 10px;
+    border-radius: 30px 30px 30px 30px;
+    cursor: pointer;
+    display: flex;
+}
+.search-bar:focus::placeholder{
+    opacity: 0;
+}
+button img {
+    width: 20px;
+    height: 20px;
+}
+button:hover{
+        background-color: #d5a2b6;
+}
 .second-container p{
     font-size: 62px;
     font-family: "Kanit", sans-serif;
@@ -97,7 +191,7 @@ body{
 .grid-container{
     display: flex;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: auto;
     background-color: white;
     gap: 0px;
@@ -105,6 +199,7 @@ body{
     padding: 30px 0;
     border-top: 4px solid rgb(209, 209, 209);  /* Top border */
     border-bottom: 4px solid rgb(209, 209, 209);
+    overflow-x: hidden;
 }
 .photo-gallery{
     width:1400px ;
@@ -211,6 +306,7 @@ body{
     }
     .grid-container{
         margin-top: 300px;
+        height:auto;
     }
     .header{
         display:inline;
@@ -246,12 +342,38 @@ body{
         position: relative;
         right: 10px;
     }
+    .contact-section{
+        height: 45vh;
+    }
     .contact-section h1{
+        margin-top: 5rem;
         font-size: 30px;
     }
     .contact-section .icons img{
         width: 60px;
         padding: 5px;
+    }
+    .container{
+        top:15rem;
+        padding: 30px;
+    }
+    .request{
+        max-width: 200%;
+        height: 20rem;
+        left: 25%;
+        right: 0;
+    }
+    .label-font{
+        font-size: 1.2rem;
+    }
+    .request .search-bar{
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 30px 30px 30px 30px;
+        font-size: 16px;
+        outline: none;
     }
 }
 @media (max-width:768px) {
@@ -306,18 +428,44 @@ body{
         position: relative;
         right: 10px;
     }
+    .contact-section{
+        height: 30vh;
+    }
     .contact-section h1{
+        margin-top: 3rem;
         font-size: 30px;
     }
     .contact-section .icons img{
         width: 60px;
         padding: 5px;
     }
+    .container{
+        top:15rem;
+        padding: 30px;
+    }
+    .request{
+        max-width: 200%;
+        left: 25%;
+        right: 0;
+    }
+    .label-font{
+        font-size: 1.2rem;
+    }
+    .request .search-bar{
+        width: 150%;
+        margin-top: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 30px 30px 30px 30px;
+        font-size: 16px;
+        outline: none;
+    }
 }
 @media (max-width:480px) {
     .photo-gallery{
-        width: calc(100% - 40px);
+        width:100%;
         columns: 1;
+        padding: 10px;
     }
     .second-container{
         padding: 10px;
@@ -330,7 +478,11 @@ body{
         font-size: 30px;
     }
     .grid-container{
+        padding: 10px;
         margin-top: 300px;
+        box-sizing: border-box;
+        width: 100%;
+        overflow-x: hidden;
     }
     .header{
         display:inline;
@@ -358,15 +510,37 @@ body{
         padding: 0;
         left: 0;
     }
-    .photo-gallery{
-        position: relative;
-        right: 10px;
+    .contact-section{
+        height: 30vh;
     }
     .contact-section h1{
+        margin-top: 5px;
         font-size: 30px;
     }
     .contact-section .icons img{
         width: 60px;
         padding: 5px;
     }
+    .container{
+        top:15rem;
+        padding: 30px;
+    }
+    .request{
+        max-width: 200%;
+        left: 25%;
+        right: 0;
+    }
+    .label-font{
+        font-size: 1.2rem;
+    }
+    .request .search-bar{
+        width: 150%;
+        margin-top: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 30px 30px 30px 30px;
+        font-size: 16px;
+        outline: none;
+    }
+
 }
