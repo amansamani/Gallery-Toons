@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portrait</title>
+    <title>GALLERY TOONS</title>
     <link rel="stylesheet" href="portrait.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,8 @@
 </head>
 
 <body>
-
     <header class="header">
-        <a class="logo">WALLPAPERS</a>
+        <a class="logo">GALLERY TOONS</a>
         <nav class="nav-bar">
             <a href="./index.html">Home</a>
             <a href="#" class="portrait">Portrait</a>
@@ -28,87 +27,225 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    <div class="container">
+        <form>
+            <input type="text" placeholder="Search Anything" name="q" class="search-bar">
+            <button type="submit" class="search"><img src="./logos/search.png" alt=""></button>
+        </form>
+    </div>
     <div class="second-container">
         <p>Royalty-free images & Royalty-free stock</p>
     </div>
     <div class="grid-container">
-        
+        <form id="photorequest-form" action="/request-photo" method="POST" class="request">
+            <label for="photo-request" class="label-font">Didn't find what you're looking for? Request it here:</label>
+            <input type="text" name="photo-request" placeholder="Describe the photo" class="search-bar">
+            <button type="submit" class="submit">Request Photo</button>
+        </form>
         <div class="photo-gallery">
-            <a href="./images/pic1.webp" download="pic1.webp">
+            <a href="./images/pic1.webp" download="pic1.webp" data-tags="evening flower goldenhour , Nature Sunset Rural scenery plants">
                 <div class="photo">
-                    <img src="./images/pic1.webp" loading="lazy" alt="">
+                    <img src="./images/pic1.webp" loading="lazy" alt="evening">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic2.webp" download="pic2.webp">
+            <a href="./images/pic2.webp" download="pic2.webp" data-tags="vehicle motor bike bikes activa scooty scooter">
                 <div class="photo">
-                    <img src="./images/pic2.webp" loading="lazy" alt="">
+                    <img src="./images/pic2.webp" loading="lazy" alt="riding-scooty">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic3.webp">
+            <a href="./images/pic3.webp"  download="pic3.webp" data-tags="evening sunset sunrise morning scenery beautiful view background orange goldenhour tower birds">
                 <div class="photo">
-                <img src="./images/pic3.webp" loading="lazy" alt="">
+                <img src="./images/pic3.webp" loading="lazy" alt="evening">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic4.webp">
+            <a href="./images/pic4.webp"  download="pic4.webp" data-tags="dragons fly birds photography insects livings things animals  ">
                 <div class="photo">
-                <img src="./images/pic4.webp" loading="lazy" alt="">
+                <img src="./images/pic4.webp" loading="lazy" alt="dragonfly">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic5.webp">
+            <a href="./images/pic5.webp"  download="pic5.webp" data-tags="streets roads homes villages buildings symmetry photography colony area houses ">
                 <div class="photo">
-                <img src="./images/pic5.webp" loading="lazy" alt="">
+                <img src="./images/pic5.webp" loading="lazy" alt="street">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic7.webp">
+            <a href="./images/pic7.webp" download="pic7.webp" data-tags="moons chaand nasa eid spaces nights astro">
                 <div class="photo">
-                <img src="./images/pic7.webp" loading="lazy" alt="">
+                <img src="./images/pic7.webp" loading="lazy" alt="moon">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic8.webp">
+            <a href="./images/pic8.webp" download="pic8.webp" data-tags="flowers plants red beautiful  " >
                 <div class="photo">
-                <img src="./images/pic8.webp" loading="lazy" alt="">
+                <img src="./images/pic8.webp" loading="lazy" alt="flower">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic10.webp">
+            <a href="./images/pic10.webp" download="pic10.webp" data-tags="villages tractor farmings vehicles sunsets golden hour ">
                 <div class="photo">
-                <img src="./images/pic10.webp" loading="lazy" alt="">
+                <img src="./images/pic10.webp" loading="lazy" alt="village">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic11.webp">
+            <a href="./images/pic11.webp" download="pic11.webp" data-tags="nature fields grass trees greenery ">
                 <div class="photo">
-                <img src="./images/pic11.webp" loading="lazy" alt="">
+                <img src="./images/pic11.webp" loading="lazy" alt="nature">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
                 </div>
             </a>
-            <a href="./images/pic12.webp">
+            <a href="./images/pic12.webp" download="pic12.webp" data-tags="stars nights sky dark spaces astro ">
                 <div class="photo">
-                <img src="./images/pic12.webp" loading="lazy" alt="">
+                <img src="./images/pic12.webp" loading="lazy" alt="stars">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic13.jpg" download="pic13.jpg" data-tags="monkey animals wild life safari ">
+                <div class="photo">
+                    <img src="./images/pic13.jpg" loading="lazy" alt="monkey">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic14.jpg" download="pic14.jpg" data-tags="monkey animals wild life safari">
+                <div class="photo">
+                    <img src="./images/pic14.jpg" loading="lazy" alt="monkey">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic17.jpg"  download="pic17.jpg" data-tags="running sports golden hour peoples atheletes fast speed">
+                <div class="photo">
+                <img src="./images/pic17.jpg" loading="lazy" alt="athelete">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic18.jpg" download="pic18.jpg" data-tags="mountain big mountains nanital tourists places beautiful top high outfields rocks">
+                <div class="photo">
+                <img src="./images/pic18.jpg" loading="lazy" alt="mountain">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic19.jpg" download="pic19.jpg" data-tags="mountain big mountains nanital tourists places beautiful top high outfields rocks ">
+                <div class="photo">
+                <img src="./images/pic19.jpg" loading="lazy" alt="mountain">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic20.jpg" download="pic20.jpg" data-tags="stars nights sky dark spaces astro clouds" >
+                <div class="photo">
+                <img src="./images/pic20.jpg" loading="lazy" alt="night">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic21.jpg" download="pic21.jpg" data-tags="laptop cyber b.tech aesthetic wallpapers study table pc computer">
+                <div class="photo">
+                <img src="./images/pic21.jpg" loading="lazy" alt="laptop">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic22.jpg" download="pic22.jpg" data-tags="skyline sky mountain big mountains nanital tourists places beautiful top high outfields rocks">
+                <div class="photo">
+                <img src="./images/pic22.jpg" loading="lazy" alt="mountain">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic23.jpg" download="pic23.jpg" data-tags="stars nights sky dark spaces astro camping wallpapers">
+                <div class="photo">
+                <img src="./images/pic23.jpg" loading="lazy" alt="stars">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic24.jpg" download="pic24.jpg" data-tags="stars nights sky dark spaces astro camping wallpapers">
+                <div class="photo">
+                <img src="./images/pic24.jpg" loading="lazy" alt="stars">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic25.jpg" download="pic25.jpg" data-tags="stars nights sky dark spaces astro camping wallpapers">
+                <div class="photo">
+                    <img src="./images/pic25.jpg" loading="lazy" alt="stars">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic26.jpg"  download="pic26.jpg" data-tags="mountain big mountains nanital tourists places beautiful top high outfields rocks">
+                <div class="photo">
+                <img src="./images/pic26.jpg" loading="lazy" alt="mountain">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic29.jpg" download="pic29.jpg" data-tags="sports atheletes basketballs peoples crowd games tournament">
+                <div class="photo">
+                <img src="./images/pic29.jpg" loading="lazy" alt="sports">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic30.jpg" download="pic30.jpg" data-tags="flowers plants loves roses greenery valentines ">
+                <div class="photo">
+                <img src="./images/pic30.jpg" loading="lazy" alt="flowers">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic31.jpg" download="pic31.jpg" data-tags="evening buildings sunsets architectures " >
+                <div class="photo">
+                <img src="./images/pic31.jpg" loading="lazy" alt="evening">
+                    <div class="downloadlogo">
+                        <img src="./logos/downloadlogo.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="./images/pic32.jpg" download="pic32.jpg" data-tags="boats vehicles rivers  ">
+                <div class="photo">
+                <img src="./images/pic32.jpg" loading="lazy" alt="boat">
                     <div class="downloadlogo">
                         <img src="./logos/downloadlogo.png" alt="">
                     </div>
@@ -128,6 +265,6 @@
      </div>
     </section>
         
-      
+    <script src="design.js"></script>
 </body>
 </html>
