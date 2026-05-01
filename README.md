@@ -18,7 +18,7 @@
 <div align="center">
 
 ### 🏠 Hero — Search & Landing
-<img width="90%" src="public/screenshots/header.png" alt="Gallery Toons Hero" />
+<img width="90%" src="public/screenshots/hero.png" alt="Gallery Toons Hero" />
 
 <br/><br/>
 
