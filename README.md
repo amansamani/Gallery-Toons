@@ -1,6 +1,17 @@
-# Gallery Toons — React
+<div align="center">
 
-A React conversion of the Gallery Toons static HTML/CSS/JS website, built with **Vite + React 18**.
+# GALLERY TOONS — React
+
+[![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite_5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Live Site](https://img.shields.io/badge/🌐_Live-gallery--toons.vercel.app-ADFF2F?style=for-the-badge&labelColor=111)](https://gallery-toons.vercel.app/)
+
+React 18 + Vite 5 conversion of the Gallery Toons static site.  
+Same look. Component architecture. Zero extra deps.
+
+</div>
+
+---
 
 ## Project Structure
 
@@ -10,14 +21,14 @@ gallery-toons/
 ├── package.json
 ├── vite.config.js
 ├── public/
-│   └── images/          ← copy your images folder here
+│   └── images/                  ← drop your images folder here
 └── src/
     ├── main.jsx
     ├── App.jsx
     ├── data/
-    │   └── images.js        ← all image metadata
+    │   └── images.js            ← all image metadata
     ├── styles/
-    │   └── globals.css      ← design tokens + reset
+    │   └── globals.css          ← design tokens + reset
     └── components/
         ├── Header.jsx / Header.css
         ├── Hero.jsx   / Hero.css
@@ -26,45 +37,46 @@ gallery-toons/
         └── Footer.jsx / Footer.css
 ```
 
-## Setup
+---
+
+## Quick Start
 
 ```bash
-# 1. Install dependencies
+git clone https://github.com/amansamani/gallery-toons.git
+cd gallery-toons
 npm install
 
-# 2. Copy your images folder into public/
-cp -r /path/to/your/images ./public/images
+# Copy your images into public/
+cp -r /path/to/images ./public/images
 
-# 3. Start dev server
-npm run dev
-
-# 4. Build for production
-npm run build
+npm run dev      # localhost:5173
+npm run build    # production build → dist/
 ```
 
-## What changed from the HTML version
+---
+
+## HTML → React: What Changed
 
 | HTML/JS | React |
 |---|---|
-| `document.getElementById` + `innerHTML` | Component state + JSX render |
+| `getElementById` + `innerHTML` | Component state + JSX |
 | Inline `<script>` image data | `src/data/images.js` module |
 | `addEventListener` for search | `onChange` / `onKeyDown` handlers |
-| `IntersectionObserver` in loop | Per-item `useEffect` in `<PhotoItem>` |
-| `<form action="formspree">` | `fetch()` in `handleSubmit` with status feedback |
-| Scrolled header via JS | `useEffect` scroll listener + CSS class toggle |
-| Mobile menu (no JS in original) | `useState` burger toggle with CSS slide-in |
+| `IntersectionObserver` in loop | `useEffect` per `<PhotoItem>` |
+| `<form action="formspree">` | `fetch()` in `handleSubmit` + status feedback |
+| JS scroll class toggle | `useEffect` scroll listener + CSS class |
+| No mobile menu JS | `useState` burger toggle + CSS slide-in |
 
-## Adding portrait.html / landscape.html
+---
 
-For multi-page routing, install React Router:
+## Multi-Page Routing
 
 ```bash
 npm install react-router-dom
 ```
 
-Then wrap `App.jsx` with `<BrowserRouter>` and add routes:
-
 ```jsx
+// App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Portrait from './pages/Portrait';
@@ -74,8 +86,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/portrait" element={<Portrait />} />
+        <Route path="/"          element={<Home />} />
+        <Route path="/portrait"  element={<Portrait />} />
         <Route path="/landscape" element={<Landscape />} />
       </Routes>
     </BrowserRouter>
@@ -83,13 +95,40 @@ export default function App() {
 }
 ```
 
-Update nav links in `Header.jsx` to use `<Link to="/portrait">` instead of `<a href>`.
+> In `Header.jsx`, replace `<a href="...">` with `<Link to="...">` from `react-router-dom`.
+
+---
 
 ## Tech Stack
 
-- React 18 + Vite 5
-- CSS Modules (per-component `.css` files)
-- Google Fonts: Bebas Neue, DM Serif Display, Space Mono
-- Formspree for contact form
-- Native `IntersectionObserver` for scroll animations
-- No extra dependencies needed
+| Layer | Tool |
+|---|---|
+| Framework | React 18 + Vite 5 |
+| Styling | CSS Modules (per-component) |
+| Fonts | Bebas Neue · DM Serif Display · Space Mono |
+| Forms | Formspree |
+| Scroll Animations | Native `IntersectionObserver` |
+| Deploy | Vercel |
+
+---
+
+## Roadmap
+
+- [x] React component architecture
+- [x] Search + category filter state
+- [x] Scroll animations via `IntersectionObserver`
+- [x] Contact form with `fetch()` + status feedback
+- [ ] React Router multi-page routing
+- [ ] User favorites with `localStorage`
+- [ ] Dynamic image fetch from API
+- [ ] Dark/light mode toggle
+
+---
+
+## Developer
+
+**Aman Samani**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-samani)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amansamani)
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanworkinfo@gmail.com)
