@@ -1,0 +1,104 @@
+.request-section {
+  padding: 5rem 2rem;
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.request-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.request-inner h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-style: italic;
+  color: var(--c-text);
+}
+
+.request-inner > p {
+  font-size: 0.82rem;
+  color: var(--c-text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── FORM ── */
+.request-form {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.request-form input {
+  flex: 1;
+  background: var(--c-surface2);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--c-text);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  outline: none;
+  transition: border-color var(--dur-base), box-shadow var(--dur-base);
+}
+
+.request-form input:focus {
+  border-color: rgba(232,213,163,0.4);
+  box-shadow: 0 0 0 3px rgba(232,213,163,0.07);
+}
+
+.request-form input::placeholder { color: var(--c-text-muted); }
+
+.btn-primary {
+  white-space: nowrap;
+  background: var(--c-accent);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background var(--dur-fast),
+    transform var(--dur-fast) var(--ease-spring),
+    box-shadow var(--dur-base);
+}
+
+.btn-primary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,213,163,0.25);
+}
+
+.btn-primary:active { transform: translateY(0); }
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── FEEDBACK ── */
+.form-feedback {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+.form-feedback--ok  { color: #6ee7b7; }
+.form-feedback--err { color: #fca5a5; }
+
+@media (max-width: 480px) {
+  .request-form { flex-direction: column; }
+  .btn-primary { width: 100%; }
+}
